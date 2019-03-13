@@ -6,8 +6,8 @@ using UnityEngine;
 **/
 public class GenerateTerrain : MonoBehaviour
 {
-	int heightScale = 4;
-	float detailScale = 10f;
+	int heightScale = 8;
+	float detailScale = 20f;
 	int slope = 3;
 
 	// Start is called before the first frame update
