@@ -1,41 +1,47 @@
 fileFormatVersion: 2
-guid: 00a21a62e5d521a4eaf11f959be4ee84
+guid: 6c6bcd8865ddba7409f0dc02eeac1b2a
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     100002: Frame
-    100004: PedalFoot
-    100006: PedalShaft
-    100008: WheelBack
-    100010: WheelFront
+    100004: PedalFootLeft
+    100006: PedalFootRight
+    100008: PedalShaft
+    100010: WheelBack
+    100012: WheelFront
     400000: //RootNode
     400002: Frame
-    400004: PedalFoot
-    400006: PedalShaft
-    400008: WheelBack
-    400010: WheelFront
+    400004: PedalFootLeft
+    400006: PedalFootRight
+    400008: PedalShaft
+    400010: WheelBack
+    400012: WheelFront
     2100000: Material.002
     2300000: Frame
-    2300002: PedalFoot
-    2300004: PedalShaft
-    2300006: WheelBack
-    2300008: WheelFront
+    2300002: PedalFootLeft
+    2300004: PedalFootRight
+    2300006: PedalShaft
+    2300008: WheelBack
+    2300010: WheelFront
     3300000: Frame
-    3300002: PedalFoot
-    3300004: PedalShaft
-    3300006: WheelBack
-    3300008: WheelFront
+    3300002: PedalFootLeft
+    3300004: PedalFootRight
+    3300006: PedalShaft
+    3300008: WheelBack
+    3300010: WheelFront
     4300000: Frame
     4300002: PedalShaft
-    4300004: PedalFoot
-    4300006: WheelBack
-    4300008: WheelFront
+    4300004: PedalFootRight
+    4300006: PedalFootLeft
+    4300008: WheelBack
+    4300010: WheelFront
     6400000: Frame
-    6400002: PedalFoot
-    6400004: PedalShaft
-    6400006: WheelBack
-    6400008: WheelFront
+    6400002: PedalFootLeft
+    6400004: PedalFootRight
+    6400006: PedalShaft
+    6400008: WheelBack
+    6400010: WheelFront
     2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
@@ -68,7 +74,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 100
+    globalScale: 1
     meshCompression: 0
     addColliders: 1
     useSRGBMaterialColor: 1
