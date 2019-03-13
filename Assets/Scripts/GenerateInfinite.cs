@@ -20,8 +20,8 @@ public class GenerateInfinite : MonoBehaviour
 	public GameObject player;
 
 	int planeSize = 10;
-	int halfTilesX = 2;	//amount of tiles to render in the x axis away from the player, 10 - player - 10
-	int halfTilesZ = 5;	//"" in z
+	int halfTilesX = 10;	//amount of tiles to render in the x axis away from the player, 10 - player - 10
+	int halfTilesZ = 10;	//"" in z
 
 	Vector3 startPos;
 
