@@ -4,29 +4,28 @@ public class AccelerateDeccelerate : MonoBehaviour
 {
 
 	public HingeJoint hinge;
-	public float power = 100f;
-	
+	public Rigidbody rb;
 
 	void FixedUpdate()
 	{
 		JointMotor motor = hinge.motor;
-		float acceleration = Input.GetAxis("Vertical");
+		//float acceleration = Input.GetAxis("Vertical");
 
 		if (Input.GetKey("w"))
 		{
-			motor.force = acceleration * power;
-			motor.targetVelocity = -200;
-			motor.freeSpin = true;
-			hinge.motor = motor;
-			hinge.useMotor = true;
+			motor.force = 5;
 		}
-		if (Input.GetKey("s"))
+		else if (Input.GetKey("s"))
 		{
-			motor.force = acceleration * power;
-			motor.targetVelocity = 0;
-			motor.freeSpin = true;
-			hinge.motor = motor;
-			hinge.useMotor = true;
+			rb.angularDrag = 200;
 		}
+		else
+		{
+			motor.force = 0;
+			rb.angularDrag = 0;
+
+		}
+		hinge.motor = motor;
+		Debug.Log("BackWheel Velocity = " + hinge.velocity);
 	}
 }
