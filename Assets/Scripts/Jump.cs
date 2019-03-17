@@ -3,15 +3,15 @@
 public class Jump : MonoBehaviour
 {
 	public Rigidbody rb;
-	public float jumpForce = 800f;
-	private bool onGround = false;
+	public float jumpForce = 1500f;
+	public bool onGround = false;
 
 	private void OnCollisionEnter(Collision collision)
 	{
 		if (collision.gameObject.tag == "Ground")
 		{
 			onGround = true;
-			Debug.Log("Collided with ground");
+			//Debug.Log("Collided with ground");
 		}
 	}
 

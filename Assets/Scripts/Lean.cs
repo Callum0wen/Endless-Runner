@@ -3,7 +3,7 @@
 public class Lean : MonoBehaviour
 {
 	public Rigidbody rb;
-	public float torque = 20f;
+	public float torque = 1500f;
 
 	void ResetTensor()
 	{
@@ -14,13 +14,13 @@ public class Lean : MonoBehaviour
     {
 		if (Input.GetKey("a"))
 		{
-			float turn = Input.GetAxis("Vertical");
-			rb.AddTorque(transform.right * torque * turn);
+			//float turn = Input.GetAxis("Vertical");
+			rb.AddTorque(-torque, 0, 0);
 		}
 		if (Input.GetKey("d"))
 		{
-			float turn = Input.GetAxis("Vertical");
-			rb.AddTorque(transform.right * -torque * turn);
+			
+			rb.AddTorque(torque, 0, 0);
 		}
 	}
 }
