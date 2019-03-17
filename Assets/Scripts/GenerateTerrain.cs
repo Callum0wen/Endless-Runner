@@ -15,6 +15,7 @@ public class GenerateTerrain : MonoBehaviour
 	{
 		//Gets the plane and goes through all the vertices, assigning the y value to be equal to the perlin
 		//noise value, relative to the detail (i.e. the smoothness), and the height (actual height of the noise).
+		gameObject.tag = "Ground";
 		Mesh mesh = this.GetComponent<MeshFilter>().mesh;
 		Vector3[] vertices = mesh.vertices;
 		this.transform.Translate(0, -this.transform.position.z / slope, 0);

@@ -104,7 +104,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8130762133864005826}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 7663106604cdbca4cb4f03b50eb0ba72, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.009976774
@@ -122,7 +122,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 8.8245256e-10, y: -0.015405661, z: -0.0066562635}
+  m_ConnectedAnchor: {x: 0, y: -0.015405661, z: -0.0066562635}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -269,7 +269,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 7.991903e-10, y: -0.0028214788, z: -0.00815837}
+  m_ConnectedAnchor: {x: 0, y: -0.0028214788, z: -0.00815837}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -413,7 +413,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.0023728607, y: 0.0041871187, z: -0.002571348}
+  m_ConnectedAnchor: {x: -0.0023728614, y: 0.0041871187, z: -0.002571348}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -557,7 +557,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.0023715678, y: -0.0040984107, z: 0.002499463}
+  m_ConnectedAnchor: {x: 0.0023715692, y: -0.0040984107, z: 0.002499463}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -698,7 +698,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8130762135274715028}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 7663106604cdbca4cb4f03b50eb0ba72, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.009977517
@@ -716,7 +716,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -2.953658e-10, y: 0.016450746, z: -0.006744263}
+  m_ConnectedAnchor: {x: 0, y: 0.016450746, z: -0.006744263}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -898,4 +898,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 8130762135778106341}
-  jumpForce: 20
+  torque: 1000

@@ -26,6 +26,6 @@ public class AccelerateDeccelerate : MonoBehaviour
 
 		}
 		hinge.motor = motor;
-		Debug.Log("BackWheel Velocity = " + hinge.velocity);
+		//Debug.Log("BackWheel Velocity = " + hinge.velocity);
 	}
 }
