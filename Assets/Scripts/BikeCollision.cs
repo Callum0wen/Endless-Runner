@@ -19,6 +19,11 @@ public class BikeCollision : MonoBehaviour
 		Physics.IgnoreCollision(pedalFootRight.GetComponent<Collider>(), pedalShaft.GetComponent<Collider>());
 		Physics.IgnoreCollision(this.GetComponent<Collider>(), wheelBack.GetComponent<Collider>());
 		Physics.IgnoreCollision(this.GetComponent<Collider>(), wheelFront.GetComponent<Collider>());
+		Physics.IgnoreCollision(pedalFootLeft.GetComponent<Collider>(), wheelBack.GetComponent<Collider>());
+		Physics.IgnoreCollision(pedalFootRight.GetComponent<Collider>(), wheelBack.GetComponent<Collider>());
+		Physics.IgnoreCollision(pedalFootLeft.GetComponent<Collider>(), wheelFront.GetComponent<Collider>());
+		Physics.IgnoreCollision(pedalFootRight.GetComponent<Collider>(), wheelFront.GetComponent<Collider>());
+		Physics.IgnoreCollision(pedalShaft.GetComponent<Collider>(), wheelBack.GetComponent<Collider>());
 
 	}
 

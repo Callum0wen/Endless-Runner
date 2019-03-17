@@ -13,7 +13,7 @@ public class AccelerateDeccelerate : MonoBehaviour
 
 		if (Input.GetKey("w"))
 		{
-			motor.force = 5;
+			motor.force = 10;
 		}
 		else if (Input.GetKey("s"))
 		{
