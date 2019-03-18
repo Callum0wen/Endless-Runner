@@ -4,29 +4,41 @@ public class FasterSlower : MonoBehaviour
 {
 	public Rigidbody frame;
 	public GameObject backWheel;
-	public float maxVelocity = 1600f;
-	public Vector3 accelerate = new Vector3 (0,0, 330);
+	public float maxVelocity = 30f;
+	public float acceleration = 0.1f;
+	private float baseVelocity = 0.1f;
+	private bool fallen = false;
 
 	private void FixedUpdate()
 	{
+		frame.velocity = frame.velocity + (transform.up * baseVelocity); 
+
 		if (backWheel.GetComponent<Jump>().onGround)
 		{
-			if (Input.GetKey("w"))
+			acceleration = Mathf.Clamp(frame.velocity.z / 10, 1, 10);
+
+			if (Input.GetKey("w") && frame.velocity.z < maxVelocity)
 			{
-				if (frame.velocity.z < maxVelocity)
-				{
-					frame.velocity += accelerate;
-					Debug.Log(frame.velocity.z);
-				}
+				backWheel.GetComponent<Rigidbody>().angularDrag = 0;
+				frame.velocity = frame.velocity + (transform.up * acceleration);
+				//frame.AddForce(accelerate * Time.deltaTime);
 			}
-			if (Input.GetKey("s"))
+			if (Input.GetKey("s") && frame.velocity.z > 0)
 			{
-				if (frame.velocity.z > 0)
-				{
-					frame.velocity -= accelerate;
-					Debug.Log("Slower!");
-				}
+				backWheel.GetComponent<Rigidbody>().angularDrag = 100;
+				//frame.velocity = -transform.up * acceleration;
+				//frame.AddForce(-accelerate * Time.deltaTime);
+			} else
+			{
+				backWheel.GetComponent<Rigidbody>().angularDrag = 0;
+			}
+			if (frame.velocity.z < 3 && !fallen)
+			{
+				frame.constraints = RigidbodyConstraints.None;
+				fallen = true;
+				Debug.Log("fall");
 			}
 		}
+		Debug.Log(frame.velocity.z);
 	}
 }

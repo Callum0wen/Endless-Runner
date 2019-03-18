@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 8130762133864005828}
   - component: {fileID: 6243547025087503907}
   - component: {fileID: 8130762133864005827}
-  - component: {fileID: 39652420517133107}
   - component: {fileID: 763627790}
   m_Layer: 0
   m_Name: WheelBack
@@ -147,20 +146,6 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!114 &39652420517133107
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8130762133864005826}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c1465633a40a004198c4c3bc9021662, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hinge: {fileID: 8130762133864005827}
-  rb: {fileID: 8130762133864005828}
 --- !u!114 &763627790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -173,7 +158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 846b8c3393b4afb4288c513547c587dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 8130762135778106341}
+  frame: {fileID: 8130762135778106341}
   jumpForce: 1500
   onGround: 0
 --- !u!1 &8130762133892478599
@@ -624,7 +609,6 @@ GameObject:
   - component: {fileID: 8130762135274715031}
   - component: {fileID: 5296860223015630733}
   - component: {fileID: 8130762135274715030}
-  - component: {fileID: 7019789037650246555}
   m_Layer: 0
   m_Name: WheelFront
   m_TagString: Untagged
@@ -756,20 +740,6 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!114 &7019789037650246555
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8130762135274715028}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c1465633a40a004198c4c3bc9021662, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hinge: {fileID: 8130762135274715030}
-  rb: {fileID: 8130762135274715031}
 --- !u!1 &8130762135778106340
 GameObject:
   m_ObjectHideFlags: 0
@@ -915,7 +885,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 8130762135778106341}
-  torque: 1500
+  torque: 2000
 --- !u!114 &823468749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -930,5 +900,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frame: {fileID: 8130762135778106341}
   backWheel: {fileID: 8130762133864005826}
-  maxVelocity: 20
-  accelerate: {x: 0, y: 0, z: 2}
+  maxVelocity: 30
+  acceleration: 10

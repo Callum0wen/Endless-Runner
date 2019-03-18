@@ -2,7 +2,7 @@
 
 public class Jump : MonoBehaviour
 {
-	public Rigidbody rb;
+	public Rigidbody frame;
 	public float jumpForce = 1500f;
 	public bool onGround = false;
 
@@ -29,7 +29,7 @@ public class Jump : MonoBehaviour
 		{
 			if (onGround)
 			{
-				rb.AddForce(0, jumpForce, 0, ForceMode.Impulse);
+				frame.AddForce(0, jumpForce, 0, ForceMode.Impulse);
 			}
 		}
 	}
