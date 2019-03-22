@@ -39,6 +39,6 @@ public class FasterSlower : MonoBehaviour
 				Debug.Log("fall");
 			}
 		}
-		Debug.Log(frame.velocity.z);
+		//Debug.Log(frame.velocity.z);
 	}
 }
