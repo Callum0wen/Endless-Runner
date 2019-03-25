@@ -756,6 +756,7 @@ GameObject:
   - component: {fileID: 8130762135778106342}
   - component: {fileID: 823468755}
   - component: {fileID: 823468749}
+  - component: {fileID: 3247361548438976140}
   m_Layer: 0
   m_Name: Frame
   m_TagString: Untagged
@@ -836,8 +837,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.017992152, y: 0.026, z: 0.022632113}
-  m_Center: {x: 0, y: 9.313227e-10, z: 4.6566118e-10}
+  m_Size: {x: 0.0038389596, y: 0.026, z: 0.021414116}
+  m_Center: {x: 0.00035571025, y: 0.0000000011920929, z: -0.00060899917}
 --- !u!54 &8130762135778106341
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -902,3 +903,16 @@ MonoBehaviour:
   backWheel: {fileID: 8130762133864005826}
   maxVelocity: 30
   acceleration: 10
+--- !u!65 &3247361548438976140
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8130762135778106340}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.018266352, y: 0.0017206825, z: 0.0014154406}
+  m_Center: {x: -0.00013710737, y: 0.01001383, z: 0.010608354}

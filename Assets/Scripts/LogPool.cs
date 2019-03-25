@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LogPool : MonoBehaviour
 {
-	static int numLog = 2;
+	static int numLog = 3;
 	public GameObject log;
 	static GameObject[] logs;
 
@@ -14,7 +14,7 @@ public class LogPool : MonoBehaviour
 		logs = new GameObject[numLog];
 		for (int i = 0; i < numLog; i++)
 		{
-			logs[i] = (GameObject)Instantiate(log, Vector3.zero, Quaternion.identity);
+			logs[i] = (GameObject)Instantiate(log, Vector3.zero, Quaternion.Euler(new Vector3(-65,180,0)));
 			logs[i].SetActive(false);
 		}
     }
