@@ -236,7 +236,7 @@ Camera:
   m_GameObject: {fileID: 534669902}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
+  m_ClearFlags: 1
   m_BackGroundColor: {r: 0.68907976, g: 0.80496985, b: 0.8962264, a: 0}
   m_projectionMatrixMode: 2
   m_SensorSize: {x: 36, y: 24}
@@ -946,6 +946,75 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 393c4c1546b6785408b39a278983d193, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &6919284871849762619
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7144782894946255633, guid: e2c2dc8f719869448ac8927ea7361af9,
+        type: 3}
+      propertyPath: m_Name
+      value: Bike-Rework
+      objectReference: {fileID: 0}
+    - target: {fileID: 7144782894945836849, guid: e2c2dc8f719869448ac8927ea7361af9,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7144782894945836849, guid: e2c2dc8f719869448ac8927ea7361af9,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7144782894945836849, guid: e2c2dc8f719869448ac8927ea7361af9,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7144782894945836849, guid: e2c2dc8f719869448ac8927ea7361af9,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7144782894945836849, guid: e2c2dc8f719869448ac8927ea7361af9,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7144782894945836849, guid: e2c2dc8f719869448ac8927ea7361af9,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7144782894945836849, guid: e2c2dc8f719869448ac8927ea7361af9,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7144782894945836849, guid: e2c2dc8f719869448ac8927ea7361af9,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7144782894945836849, guid: e2c2dc8f719869448ac8927ea7361af9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7144782894945836849, guid: e2c2dc8f719869448ac8927ea7361af9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7144782894945836849, guid: e2c2dc8f719869448ac8927ea7361af9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e2c2dc8f719869448ac8927ea7361af9, type: 3}
 --- !u!1001 &8130762134990960936
 PrefabInstance:
   m_ObjectHideFlags: 0
