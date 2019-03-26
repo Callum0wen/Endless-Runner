@@ -307,8 +307,9 @@ GameObject:
   m_Component:
   - component: {fileID: 686246412}
   - component: {fileID: 686246411}
+  - component: {fileID: 686246413}
   m_Layer: 0
-  m_Name: LogPool
+  m_Name: ObstaclePool
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -341,21 +342,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &686246413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 686246410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12d1f4d0b39768341bf27cc86b776be3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rock: {fileID: 1599612675041445787, guid: 2a1293c09550eac4cae1475671a8c592, type: 3}
 --- !u!1 &823468748 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8130762135778106340, guid: ad4f751c06ea58f4a85ffd5bafa7bb78,
     type: 3}
   m_PrefabInstance: {fileID: 8130762134990960936}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &823468754 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8130762135778106362, guid: ad4f751c06ea58f4a85ffd5bafa7bb78,
+--- !u!54 &823468753 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 8130762135778106341, guid: ad4f751c06ea58f4a85ffd5bafa7bb78,
     type: 3}
   m_PrefabInstance: {fileID: 8130762134990960936}
   m_PrefabAsset: {fileID: 0}
---- !u!54 &823468756 stripped
-Rigidbody:
-  m_CorrespondingSourceObject: {fileID: 8130762135778106341, guid: ad4f751c06ea58f4a85ffd5bafa7bb78,
+--- !u!4 &823468754 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8130762135778106362, guid: ad4f751c06ea58f4a85ffd5bafa7bb78,
     type: 3}
   m_PrefabInstance: {fileID: 8130762134990960936}
   m_PrefabAsset: {fileID: 0}
@@ -900,7 +914,7 @@ FixedJoint:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2857323593296881539}
-  m_ConnectedBody: {fileID: 823468756}
+  m_ConnectedBody: {fileID: 823468753}
   m_BreakForce: 60000
   m_BreakTorque: Infinity
   m_EnableCollision: 0
@@ -920,6 +934,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bike: {fileID: 823468748}
+--- !u!114 &2857323593296881545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2857323593296881539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 393c4c1546b6785408b39a278983d193, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8130762134990960936
 PrefabInstance:
   m_ObjectHideFlags: 0

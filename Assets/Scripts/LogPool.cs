@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class LogPool : MonoBehaviour
 {
@@ -15,6 +13,7 @@ public class LogPool : MonoBehaviour
 		for (int i = 0; i < numLog; i++)
 		{
 			logs[i] = (GameObject)Instantiate(log, Vector3.zero, Quaternion.Euler(new Vector3(-65,180,0)));
+			logs[i].tag = "Obstacle";
 			logs[i].SetActive(false);
 		}
     }

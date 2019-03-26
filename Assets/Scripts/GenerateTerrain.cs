@@ -28,7 +28,8 @@ public class GenerateTerrain : MonoBehaviour
 
 			vertices[v].y = (perlin * heightScale) - (vertices[v].z / slope);
 
-			if (perlin > 0.7 && this.transform.position.x == 0 && Mathf.Round(vertices[v].x) == -3 && !hasLog)
+			//Spawns logs
+			if (perlin > 0.8 && this.transform.position.x == 0 && Mathf.Round(vertices[v].x) == -3 && !hasLog)
 			{
 				GameObject newLog = LogPool.getLog();
 				if(newLog != null)
@@ -40,6 +41,21 @@ public class GenerateTerrain : MonoBehaviour
 					newLog.SetActive(true);
 					myObstacles.Add(newLog);
 					hasLog = true;
+				}
+			}
+
+			//Spawns rocks
+			if (perlin > 0.5 && perlin < 0.6 && this.transform.position.x == 0 && Mathf.Round(vertices[v].x) == -2 && !hasLog)
+			{
+				GameObject newRock = RockPool.getRock();
+				if (newRock != null)
+				{
+					Vector3 rockPos = new Vector3(vertices[v].x,
+												vertices[v].y + this.transform.position.y,
+												vertices[v].z + this.transform.position.z);
+					newRock.transform.position = rockPos;
+					newRock.SetActive(true);
+					myObstacles.Add(newRock);
 				}
 			}
 		}

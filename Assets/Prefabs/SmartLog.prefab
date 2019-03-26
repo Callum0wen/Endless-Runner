@@ -49,7 +49,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 588d38443cb8af940849667cfdc42469, type: 3}
       propertyPath: m_Name
-      value: Log
+      value: SmartLog
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 588d38443cb8af940849667cfdc42469, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 588d38443cb8af940849667cfdc42469, type: 3}
       propertyPath: m_LocalPosition.x
