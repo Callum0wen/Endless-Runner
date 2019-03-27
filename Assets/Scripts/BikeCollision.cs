@@ -11,7 +11,6 @@ public class BikeCollision : MonoBehaviour
     {
 		Physics.IgnoreCollision(pedalFootLeft.GetComponent<Collider>(), wheelBack.GetComponent<Collider>());
 		Physics.IgnoreCollision(pedalFootRight.GetComponent<Collider>(), wheelBack.GetComponent<Collider>());
-
 	}
 
     // Update is called once per frame

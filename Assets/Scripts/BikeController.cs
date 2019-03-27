@@ -8,18 +8,15 @@ public class BikeController : MonoBehaviour
 
 	public Rigidbody bike;
 
-	public WheelCollider wheelBackC, wheelFrontC;
+	public GameObject wheelBack, wheelFront;
 
 	public Transform pedalShaft, pedalLeft, pedalRight;
 
 	public float maxVelocity = 30f;
-
+	public float bikeForce = 10f;
 	public float pedalRotation = 3;
-
-	public float motorForce = 5000f;
 	public float leanForce = 2000f;
 	public float jumpForce = 1500f;
-	private WheelHit hit;
 
 	void ResetTensor()
 	{
@@ -35,21 +32,21 @@ public class BikeController : MonoBehaviour
 
 	private void Accelerate()
 	{
-		if (verticalInput > 0)
+		if (wheelBack.GetComponent<WheelCollisionCheck>().onGround)
 		{
-			if (bike.velocity.z < maxVelocity)
+			if (verticalInput > 0 && bike.velocity.z < maxVelocity)
 			{
-				wheelBackC.motorTorque = motorForce;
+				bike.AddForce(0, 0, bikeForce);
+				UpdatePedalPose();
 			}
-			UpdatePedalPose();
-		}
-		if (verticalInput < 0)
-		{
-			wheelBackC.brakeTorque = motorForce;
-		}
-		if(verticalInput == 0)
-		{
-			wheelBackC.motorTorque = 0;
+			if (verticalInput < 0 && bike.velocity.z > 0)
+			{
+				wheelBack.GetComponent<Rigidbody>().angularDrag = 200;
+			}
+			if (verticalInput == 0)
+			{
+				wheelBack.GetComponent<Rigidbody>().angularDrag = 0;
+			}
 		}
 	}
 
@@ -62,7 +59,7 @@ public class BikeController : MonoBehaviour
 	{
 		if (jump > 0)
 		{
-			if (wheelBackC.GetGroundHit(out hit))
+			if (wheelBack.GetComponent<WheelCollisionCheck>().onGround)
 			{
 				bike.AddForce(0, jumpForce, 0, ForceMode.Impulse);
 			}

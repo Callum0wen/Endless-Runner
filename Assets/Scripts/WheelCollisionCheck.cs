@@ -4,7 +4,7 @@ public class WheelCollisionCheck : MonoBehaviour
 {
 	public bool onGround;
 
-	private void OnCollisionEnter(Collision collision)
+	private void OnTriggerEnter(Collision collision)
 	{
 		if (collision.gameObject.tag == "Ground")
 		{
@@ -13,7 +13,7 @@ public class WheelCollisionCheck : MonoBehaviour
 		}
 	}
 
-	private void OnCollisionExit(Collision collision)
+	private void OnTriggerExit(Collision collision)
 	{
 		if (collision.gameObject.tag == "Ground")
 		{
