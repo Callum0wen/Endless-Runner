@@ -10,6 +10,7 @@ public class PlayerCollision : MonoBehaviour
 
 		if (collision.collider.tag == "Obstacle" || collision.collider.tag == "Ground")
 		{
+			bike.GetComponentInChildren<WheelCollider>().motorTorque = 0;
 			bike.GetComponent<BikeController>().enabled = false;
 			bike.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
 			man.breakForce = 1;

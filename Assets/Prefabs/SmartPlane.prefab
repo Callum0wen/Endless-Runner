@@ -91,6 +91,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bed6f59868a15d42878d48b25f7025a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  landscape: {fileID: 176088536494020663, guid: 0a0a7e0938917744a9fba2b9770cdf01,
+    type: 3}
+  myObstacles: []
 --- !u!154 &4937657117372793130
 TerrainCollider:
   m_ObjectHideFlags: 0

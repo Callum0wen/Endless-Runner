@@ -6,11 +6,13 @@ using UnityEngine;
 **/
 public class GenerateTerrain : MonoBehaviour
 {
+	public GameObject landscape;
+
 	int heightScale = 8;
 	float detailScale = 30f;
 	int slope = 3;
 	bool hasLog = false;
-	List<GameObject> myObstacles = new List<GameObject>();
+	public List<GameObject> myObstacles = new List<GameObject>();
 
 	// Start is called before the first frame update
 	void Start()
@@ -30,36 +32,7 @@ public class GenerateTerrain : MonoBehaviour
 
 			if (this.transform.position.x == 0 && Mathf.Round(vertices[v].x) == -3 && !hasLog)
 			{
-				//Spawns logs
-				if (perlin > 0.8)
-				{
-					GameObject newLog = LogPool.getLog();
-					if (newLog != null)
-					{
-						Vector3 logPos = new Vector3(vertices[v].x,
-													vertices[v].y + this.transform.position.y,
-													vertices[v].z + this.transform.position.z);
-						newLog.transform.position = logPos;
-						newLog.SetActive(true);
-						myObstacles.Add(newLog);
-						hasLog = true;
-					}
-				}
-
-				//Spawns rocks
-				if (perlin > 0.5 && perlin < 0.6)
-				{
-					GameObject newRock = RockPool.getRock();
-					if (newRock != null)
-					{
-						Vector3 rockPos = new Vector3(vertices[v].x,
-													vertices[v].y + this.transform.position.y,
-													vertices[v].z + this.transform.position.z);
-						newRock.transform.position = rockPos;
-						newRock.SetActive(true);
-						myObstacles.Add(newRock);
-					}
-				}
+				landscape.GetComponent<GenerateObstacles>().spawnObstacle(perlin, vertices[v], this);
 			}
 
 			
@@ -71,12 +44,6 @@ public class GenerateTerrain : MonoBehaviour
 		mesh.RecalculateNormals();
 		this.gameObject.AddComponent<MeshCollider>();
 	}
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
 	private void OnDestroy()
 	{
