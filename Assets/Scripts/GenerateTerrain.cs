@@ -28,36 +28,41 @@ public class GenerateTerrain : MonoBehaviour
 
 			vertices[v].y = (perlin * heightScale) - (vertices[v].z / slope);
 
-			//Spawns logs
-			if (perlin > 0.8 && this.transform.position.x == 0 && Mathf.Round(vertices[v].x) == -3 && !hasLog)
+			if (this.transform.position.x == 0 && Mathf.Round(vertices[v].x) == -3 && !hasLog)
 			{
-				GameObject newLog = LogPool.getLog();
-				if(newLog != null)
+				//Spawns logs
+				if (perlin > 0.8)
 				{
-					Vector3 logPos = new Vector3(vertices[v].x,
-												vertices[v].y + this.transform.position.y,
-												vertices[v].z + this.transform.position.z);
-					newLog.transform.position = logPos;
-					newLog.SetActive(true);
-					myObstacles.Add(newLog);
-					hasLog = true;
+					GameObject newLog = LogPool.getLog();
+					if (newLog != null)
+					{
+						Vector3 logPos = new Vector3(vertices[v].x,
+													vertices[v].y + this.transform.position.y,
+													vertices[v].z + this.transform.position.z);
+						newLog.transform.position = logPos;
+						newLog.SetActive(true);
+						myObstacles.Add(newLog);
+						hasLog = true;
+					}
+				}
+
+				//Spawns rocks
+				if (perlin > 0.5 && perlin < 0.6)
+				{
+					GameObject newRock = RockPool.getRock();
+					if (newRock != null)
+					{
+						Vector3 rockPos = new Vector3(vertices[v].x,
+													vertices[v].y + this.transform.position.y,
+													vertices[v].z + this.transform.position.z);
+						newRock.transform.position = rockPos;
+						newRock.SetActive(true);
+						myObstacles.Add(newRock);
+					}
 				}
 			}
 
-			//Spawns rocks
-			if (perlin > 0.5 && perlin < 0.6 && this.transform.position.x == 0 && Mathf.Round(vertices[v].x) == -2 && !hasLog)
-			{
-				GameObject newRock = RockPool.getRock();
-				if (newRock != null)
-				{
-					Vector3 rockPos = new Vector3(vertices[v].x,
-												vertices[v].y + this.transform.position.y,
-												vertices[v].z + this.transform.position.z);
-					newRock.transform.position = rockPos;
-					newRock.SetActive(true);
-					myObstacles.Add(newRock);
-				}
-			}
+			
 		}
 
 		//Reasigns the vertices back to the plane and recalulates so that it renders correctly.

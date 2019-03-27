@@ -2,12 +2,17 @@
 
 public class PlayerCollision : MonoBehaviour
 {
+	public GameObject bike;
+	public FixedJoint man;
+
 	private void OnCollisionEnter(Collision collision)
 	{
 
-		if (collision.collider.name == "Obstacle" || collision.collider.name == "Ground")
+		if (collision.collider.tag == "Obstacle" || collision.collider.tag == "Ground")
 		{
-			Debug.Log("player was hit");
+			bike.GetComponent<BikeController>().enabled = false;
+			bike.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+			man.breakForce = 1;
 		}
 	}
 }

@@ -200,6 +200,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 140, y: 40, z: 0}
+--- !u!1 &389032268 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8130762133864005826, guid: ad4f751c06ea58f4a85ffd5bafa7bb78,
+    type: 3}
+  m_PrefabInstance: {fileID: 8130762134990960936}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &534669902
 GameObject:
   m_ObjectHideFlags: 0
@@ -297,6 +303,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerPos: {fileID: 823468754}
   offset: {x: 20, y: 2, z: 0}
+--- !u!1 &621694292 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8130762133892478599, guid: ad4f751c06ea58f4a85ffd5bafa7bb78,
+    type: 3}
+  m_PrefabInstance: {fileID: 8130762134990960936}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &686246410
 GameObject:
   m_ObjectHideFlags: 0
@@ -361,6 +373,22 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 8130762134990960936}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &823468752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 823468748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 003ad0b457b8e3941977bc38a037ed88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pedalShaft: {fileID: 621694292}
+  pedalFootLeft: {fileID: 1392103817}
+  pedalFootRight: {fileID: 1651734908}
+  wheelBack: {fileID: 389032268}
 --- !u!54 &823468753 stripped
 Rigidbody:
   m_CorrespondingSourceObject: {fileID: 8130762135778106341, guid: ad4f751c06ea58f4a85ffd5bafa7bb78,
@@ -418,6 +446,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1392103817 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8130762134923432266, guid: ad4f751c06ea58f4a85ffd5bafa7bb78,
+    type: 3}
+  m_PrefabInstance: {fileID: 8130762134990960936}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1578456004 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3800521862780901979, guid: 418ac2c122c57734893c7dfe941184c8,
@@ -437,6 +471,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bike: {fileID: 823468748}
+--- !u!1 &1651734908 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8130762134051062678, guid: ad4f751c06ea58f4a85ffd5bafa7bb78,
+    type: 3}
+  m_PrefabInstance: {fileID: 8130762134990960936}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1376248623442228032
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1026,11 +1066,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Frame
-      objectReference: {fileID: 0}
-    - target: {fileID: 8130762135778106340, guid: ad4f751c06ea58f4a85ffd5bafa7bb78,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8130762135778106362, guid: ad4f751c06ea58f4a85ffd5bafa7bb78,
         type: 3}

@@ -753,7 +753,6 @@ GameObject:
   - component: {fileID: 8130762135778106360}
   - component: {fileID: 8985426569364198617}
   - component: {fileID: 8130762135778106341}
-  - component: {fileID: 8130762135778106342}
   - component: {fileID: 823468755}
   - component: {fileID: 823468749}
   - component: {fileID: 3247361548438976140}
@@ -855,24 +854,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 98
   m_CollisionDetection: 0
---- !u!114 &8130762135778106342
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8130762135778106340}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 003ad0b457b8e3941977bc38a037ed88, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  frame: {fileID: 8130762135778106340}
-  pedalShaft: {fileID: 8130762133892478599}
-  pedalFootLeft: {fileID: 8130762134923432266}
-  pedalFootRight: {fileID: 8130762134051062678}
-  wheelBack: {fileID: 8130762133864005826}
-  wheelFront: {fileID: 8130762135274715028}
 --- !u!114 &823468755
 MonoBehaviour:
   m_ObjectHideFlags: 0

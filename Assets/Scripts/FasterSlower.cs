@@ -5,7 +5,7 @@ public class FasterSlower : MonoBehaviour
 	public Rigidbody frame;
 	public GameObject backWheel;
 	public float maxVelocity = 30f;
-	public float acceleration = 0.1f;
+	private float acceleration;
 	private float baseVelocity = 0.1f;
 	private bool fallen = false;
 
