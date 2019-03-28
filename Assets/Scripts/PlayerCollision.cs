@@ -2,7 +2,7 @@
 
 public class PlayerCollision : MonoBehaviour
 {
-	public GameObject bike;
+	public Rigidbody bike;
 	public FixedJoint man;
 	private bool fallen = false;
 	public GameManager gameManager;
@@ -13,11 +13,10 @@ public class PlayerCollision : MonoBehaviour
 		{
 			if (collision.collider.tag == "Obstacle" || collision.collider.tag == "Ground")
 			{
-				bike.GetComponent<BikeController>().enabled = false;
-				bike.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+				bike.constraints = RigidbodyConstraints.None;
 				man.breakForce = 1;
-				fallen = true;
 				gameManager.EndGame();
+				fallen = true;
 			}
 		}
 	}

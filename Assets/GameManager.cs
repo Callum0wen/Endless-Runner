@@ -5,15 +5,21 @@ public class GameManager : MonoBehaviour
 {
 	public GameObject bike;
 	public GameObject score;
+	public GameObject gameOverUI;
 
-	public float restartDelay = 5f;
+	public float gameOverUIDelay = 5f;
 
     public void EndGame()
 	{
 		bike.GetComponent<BikeController>().enabled = false;
 		score.GetComponent<Score>().enabled = false;
-		Debug.Log("Game Over");
-		Invoke("Restart", restartDelay);
+
+		Invoke("EndScreen", gameOverUIDelay);
+	}
+
+	public void EndScreen()
+	{
+		gameOverUI.SetActive(true);
 	}
 
 	private void Restart()

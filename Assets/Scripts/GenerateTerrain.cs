@@ -31,7 +31,7 @@ public class GenerateTerrain : MonoBehaviour
 
 			if (this.transform.position.x == 0 && Mathf.Round(vertices[v].x) == -3)
 			{
-				landscape.GetComponent<GenerateObstacles>().spawnObstacle(perlin, vertices[v], this);
+				landscape.GetComponent<GenerateObstacles>().spawnObstacle(perlin, vertices[v] + this.transform.position, this);
 			}
 
 			
