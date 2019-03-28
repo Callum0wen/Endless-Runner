@@ -3,7 +3,12 @@ using UnityEngine;
 
 public class GenerateObstacles : MonoBehaviour
 {
-	private Vector3 lastObstacle = new Vector3(0,0,0);
+	private Vector3 lastObstacle;
+
+	private void Start()
+	{
+		lastObstacle = new Vector3(0,0,0);
+	}
 
 	public void spawnObstacle (float perlin, Vector3 coordinate, GenerateTerrain plane)
 	{

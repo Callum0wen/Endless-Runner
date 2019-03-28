@@ -2,22 +2,20 @@
 
 public class WheelCollisionCheck : MonoBehaviour
 {
-	public bool onGround;
+	public bool onGround = false;
 
-	private void OnTriggerEnter(Collision collision)
+	private void OnTriggerStay(Collider other)
 	{
-		if (collision.gameObject.tag == "Ground")
+		if (other.gameObject.tag == "Ground" || other.gameObject.tag == "Obstacle")
 		{
-			Debug.Log("on ground");
 			onGround = true;
 		}
 	}
 
-	private void OnTriggerExit(Collision collision)
+	private void OnTriggerExit(Collider other)
 	{
-		if (collision.gameObject.tag == "Ground")
+		if (other.gameObject.tag == "Ground" || other.gameObject.tag == "Obstacle")
 		{
-			Debug.Log("off ground");
 			onGround = false;
 		}
 	}

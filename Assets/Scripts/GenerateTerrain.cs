@@ -11,7 +11,6 @@ public class GenerateTerrain : MonoBehaviour
 	int heightScale = 8;
 	float detailScale = 30f;
 	int slope = 3;
-	bool hasLog = false;
 	public List<GameObject> myObstacles = new List<GameObject>();
 
 	// Start is called before the first frame update
@@ -30,7 +29,7 @@ public class GenerateTerrain : MonoBehaviour
 
 			vertices[v].y = (perlin * heightScale) - (vertices[v].z / slope);
 
-			if (this.transform.position.x == 0 && Mathf.Round(vertices[v].x) == -3 && !hasLog)
+			if (this.transform.position.x == 0 && Mathf.Round(vertices[v].x) == -3)
 			{
 				landscape.GetComponent<GenerateObstacles>().spawnObstacle(perlin, vertices[v], this);
 			}
