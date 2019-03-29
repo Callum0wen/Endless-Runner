@@ -9,7 +9,7 @@ public class GenerateTerrain : MonoBehaviour
 	public GameObject landscape;
 
 	int heightScale = 8;
-	float detailScale = 30f;
+	float detailScale = 40f;
 	int slope = 3;
 	public List<GameObject> myObstacles = new List<GameObject>();
 

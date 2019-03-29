@@ -12,13 +12,13 @@ public class GenerateObstacles : MonoBehaviour
 
 	public void spawnObstacle (float perlin, Vector3 coordinate, GenerateTerrain plane)
 	{
-		if((coordinate.z) - (lastObstacle.z + 10) > 0)
+		if((coordinate.z) - (lastObstacle.z + 50) > 0)
 		{
-			Debug.Log("Obstacle can spawn");
+			//Debug.Log("Obstacle can spawn");
 			//Spawns logs
 			if (perlin > 0.7)
 			{
-				Debug.Log("Tree spawned");
+				//Debug.Log("Tree spawned");
 				GameObject newLog = LogPool.getLog();
 				if (newLog != null)
 				{
@@ -35,7 +35,7 @@ public class GenerateObstacles : MonoBehaviour
 			//Spawns rocks
 			if (perlin > 0.5 && perlin < 0.6)
 			{
-				Debug.Log("Rock spawned");
+				//Debug.Log("Rock spawned");
 				GameObject newRock = RockPool.getRock();
 				if (newRock != null)
 				{
