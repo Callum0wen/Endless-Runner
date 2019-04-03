@@ -12,10 +12,12 @@ public class GenerateTerrain : MonoBehaviour
 	float detailScale = 40f;
 	int slope = 3;
 	public List<GameObject> myObstacles = new List<GameObject>();
+	public int seed;
 
 	// Start is called before the first frame update
 	void Start()
 	{
+		Debug.Log(seed);
 		//Gets the plane and goes through all the vertices, assigning the y value to be equal to the perlin
 		//noise value, relative to the detail (i.e. the smoothness), and the height (actual height of the noise).
 		gameObject.tag = "Ground";
@@ -24,8 +26,8 @@ public class GenerateTerrain : MonoBehaviour
 		this.transform.Translate(0, -this.transform.position.z / slope, 0);
 		for(int v = 0; v < vertices.Length; v++)
 		{
-			float perlin = Mathf.PerlinNoise((vertices[v].z + this.transform.position.z) / detailScale,
-												(vertices[v].z + this.transform.position.z) / detailScale);
+			float perlin = Mathf.PerlinNoise(((vertices[v].z + this.transform.position.z) / detailScale) + seed,
+												((vertices[v].z + this.transform.position.z) / detailScale) + seed);
 
 			vertices[v].y = (perlin * heightScale) - (vertices[v].z / slope);
 

@@ -2616,7 +2616,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 393c4c1546b6785408b39a278983d193, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 0}
+  gameManager: {fileID: 1272341069842537663, guid: 42ad25f9f8ddcc943b151d4b41bacfe5,
+    type: 3}
 --- !u!1 &3800521862780900549
 GameObject:
   m_ObjectHideFlags: 0
@@ -3668,7 +3669,7 @@ CharacterJoint:
     limit: 29.747295
     bounciness: 0
     contactDistance: 0
-  m_EnableProjection: 0
+  m_EnableProjection: 1
   m_ProjectionDistance: 0.1
   m_ProjectionAngle: 180
   m_BreakForce: Infinity
@@ -3776,7 +3777,7 @@ CharacterJoint:
     limit: 40
     bounciness: 0
     contactDistance: 0
-  m_EnableProjection: 0
+  m_EnableProjection: 1
   m_ProjectionDistance: 0.1
   m_ProjectionAngle: 180
   m_BreakForce: Infinity
@@ -3978,7 +3979,7 @@ CharacterJoint:
     limit: 0
     bounciness: 0
     contactDistance: 0
-  m_EnableProjection: 0
+  m_EnableProjection: 1
   m_ProjectionDistance: 0.1
   m_ProjectionAngle: 180
   m_BreakForce: Infinity
@@ -4119,7 +4120,7 @@ CharacterJoint:
     limit: 0
     bounciness: 0
     contactDistance: 0
-  m_EnableProjection: 0
+  m_EnableProjection: 1
   m_ProjectionDistance: 0.1
   m_ProjectionAngle: 180
   m_BreakForce: Infinity
@@ -4509,10 +4510,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.0025002286
-  m_Height: 0.010860442
+  m_Radius: 0.0022012463
+  m_Height: 0.010201028
   m_Direction: 1
-  m_Center: {x: 0.0000061611213, y: 0.005430327, z: 0.00031292133}
+  m_Center: {x: 0.000006157403, y: 0.005760032, z: 0.00001394015}
 --- !u!54 &3800521862780901960
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4565,7 +4566,7 @@ CharacterJoint:
     limit: 0
     bounciness: 0
     contactDistance: 0
-  m_EnableProjection: 0
+  m_EnableProjection: 1
   m_ProjectionDistance: 0.1
   m_ProjectionAngle: 180
   m_BreakForce: Infinity
@@ -4706,7 +4707,7 @@ CharacterJoint:
     limit: 0
     bounciness: 0
     contactDistance: 0
-  m_EnableProjection: 0
+  m_EnableProjection: 1
   m_ProjectionDistance: 0.1
   m_ProjectionAngle: 180
   m_BreakForce: Infinity
@@ -4942,7 +4943,7 @@ CharacterJoint:
     limit: 0
     bounciness: 0
     contactDistance: 0
-  m_EnableProjection: 0
+  m_EnableProjection: 1
   m_ProjectionDistance: 0.1
   m_ProjectionAngle: 180
   m_BreakForce: Infinity
@@ -5071,10 +5072,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.002725509
-  m_Height: 0.010860444
+  m_Radius: 0.0023951428
+  m_Height: 0.010367589
   m_Direction: 1
-  m_Center: {x: 0.00040619334, y: 0.005430223, z: 0.00012643098}
+  m_Center: {x: 0.00022514258, y: 0.0056766453, z: -0.00038500846}
 --- !u!54 &3800521862780901980
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5127,7 +5128,7 @@ CharacterJoint:
     limit: 0
     bounciness: 0
     contactDistance: 0
-  m_EnableProjection: 0
+  m_EnableProjection: 1
   m_ProjectionDistance: 0.1
   m_ProjectionAngle: 180
   m_BreakForce: Infinity
@@ -5266,7 +5267,7 @@ CharacterJoint:
     limit: 0
     bounciness: 0
     contactDistance: 0
-  m_EnableProjection: 0
+  m_EnableProjection: 1
   m_ProjectionDistance: 0.1
   m_ProjectionAngle: 180
   m_BreakForce: Infinity
@@ -5287,7 +5288,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 393c4c1546b6785408b39a278983d193, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 0}
+  gameManager: {fileID: 1272341069842537663, guid: 42ad25f9f8ddcc943b151d4b41bacfe5,
+    type: 3}
 --- !u!1 &3800521862780901985
 GameObject:
   m_ObjectHideFlags: 0
@@ -5419,7 +5421,7 @@ CharacterJoint:
     limit: 40
     bounciness: 0
     contactDistance: 0
-  m_EnableProjection: 0
+  m_EnableProjection: 1
   m_ProjectionDistance: 0.1
   m_ProjectionAngle: 180
   m_BreakForce: Infinity
@@ -5559,7 +5561,7 @@ CharacterJoint:
     limit: 40
     bounciness: 0
     contactDistance: 0
-  m_EnableProjection: 0
+  m_EnableProjection: 1
   m_ProjectionDistance: 0.1
   m_ProjectionAngle: 180
   m_BreakForce: Infinity
@@ -8031,7 +8033,7 @@ CharacterJoint:
     limit: 0
     bounciness: 0
     contactDistance: 0
-  m_EnableProjection: 0
+  m_EnableProjection: 1
   m_ProjectionDistance: 0.1
   m_ProjectionAngle: 180
   m_BreakForce: Infinity

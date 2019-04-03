@@ -1,6 +1,6 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 class Tile
 {
@@ -19,6 +19,9 @@ public class GenerateInfinite : MonoBehaviour
 	public GameObject plane;
 	public GameObject player;
 
+	public Text seedText;
+	public int seed;
+
 	int planeSize = 10;
 	int halfTilesX = 5;	//amount of tiles to render in the x axis away from the player, 10 - player - 10
 	int halfTilesZ = 10;	//"" in z
@@ -30,6 +33,10 @@ public class GenerateInfinite : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+		seed = Random.Range(0, 10000);
+		Debug.Log("made seed");
+		seedText.text = seed.ToString();
+
 		this.gameObject.transform.position = Vector3.zero;
 		startPos = Vector3.zero;
 
@@ -44,6 +51,7 @@ public class GenerateInfinite : MonoBehaviour
 											0,
 											(z * planeSize + startPos.z));
 				GameObject t = (GameObject)Instantiate(plane, pos, Quaternion.identity);
+				t.GetComponent<GenerateTerrain>().seed = seed;
 
 				string tilename = "Tile_" + ((int)(pos.x)).ToString() + "_" + ((int)(pos.z)).ToString();
 				t.name = tilename;
@@ -80,6 +88,7 @@ public class GenerateInfinite : MonoBehaviour
 					if (!tiles.ContainsKey(tilename))
 					{
 						GameObject t = (GameObject)Instantiate(plane, pos, Quaternion.identity);
+						t.GetComponent<GenerateTerrain>().seed = seed;
 						t.name = tilename;
 						Tile tile = new Tile(t, updateTime);
 						tiles.Add(tilename, tile);

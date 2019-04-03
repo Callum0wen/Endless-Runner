@@ -11,8 +11,14 @@ public class GameManager : MonoBehaviour
 	public float gameOverUIDelay = 5f;
 	public bool gameOver = false;
 
-    public void EndGame()
+	private void Start()
 	{
+		gameOver = false;
+	}
+
+	public void EndGame()
+	{
+		Debug.Log("Run EndGame()");
 		gameOver = true;
 		bike.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
 		man.breakForce = 1;
@@ -29,7 +35,7 @@ public class GameManager : MonoBehaviour
 
 	public void Restart()
 	{
-		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 	}
 
 	public void Menu ()

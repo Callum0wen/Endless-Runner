@@ -21,8 +21,8 @@ public class BikeController : MonoBehaviour
 	public float jumpForce = 1500f;
 
 	public float cameraOffset = 0f;
-	public float minCameraDistance = 0f;
-	public float maxCameraDistance = 35f;
+	public float minCameraDistance = -5f;
+	public float maxCameraDistance = 20f;
 
 	void ResetTensor()
 	{
@@ -87,7 +87,7 @@ public class BikeController : MonoBehaviour
 
 	private void StopCheck()
 	{
-		if (bike.velocity.z < 1)
+		if (bike.velocity.z < 0.5)
 		{
 			gameManager.EndGame();
 		}
@@ -97,15 +97,15 @@ public class BikeController : MonoBehaviour
 	{
 		if (verticalInput > 0 && cameraOffset < maxCameraDistance)
 		{
-			cameraOffset += 0.001f;
+			cameraOffset += 0.02f;
 		}
 		if (verticalInput < 0 && cameraOffset > minCameraDistance)
 		{
-			cameraOffset -= 0.001f;
+			cameraOffset -= 0.01f;
 		}
 		if (cameraOffset > minCameraDistance)
 		{
-			cameraOffset -= 0.001f;
+			cameraOffset -= 0.01f;
 		}
 	}
 

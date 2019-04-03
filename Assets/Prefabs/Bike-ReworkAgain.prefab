@@ -150,11 +150,11 @@ HingeJoint:
   m_Motor:
     targetVelocity: 0
     force: 0
-    freeSpin: 1
+    freeSpin: 0
   m_UseLimits: 0
   m_Limits:
     min: 0
-    max: 0
+    max: 0.01
     bounciness: 0
     bounceMinVelocity: 0.2
     contactDistance: 0
@@ -375,15 +375,15 @@ HingeJoint:
     spring: 5000
     damper: 1000
     targetPosition: 0.05
-  m_UseMotor: 1
+  m_UseMotor: 0
   m_Motor:
-    targetVelocity: -1000
+    targetVelocity: 0
     force: 0
-    freeSpin: 1
+    freeSpin: 0
   m_UseLimits: 0
   m_Limits:
     min: 0
-    max: 0
+    max: 0.01
     bounciness: 0
     bounceMinVelocity: 0.2
     contactDistance: 0
@@ -665,7 +665,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 98
-  m_CollisionDetection: 2
+  m_CollisionDetection: 0
 --- !u!114 &8949518467577593263
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -687,9 +687,12 @@ MonoBehaviour:
   gameManager: {fileID: 0}
   maxVelocity: 30
   bikeForce: 10
-  pedalRotation: 3
+  pedalRotation: 10
   leanForce: 1500
   jumpForce: 750
+  cameraOffset: 0
+  minCameraDistance: -5
+  maxCameraDistance: 20
 --- !u!114 &2239500200811839687
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -797,8 +800,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.383896, y: 2.0068703, z: 2.4970312}
-  m_Center: {x: 0.00035570562, y: -0.10488701, z: 0.085885525}
+  m_Size: {x: 0.1569376, y: 2.1099944, z: 2.625343}
+  m_Center: {x: 0.0038580894, y: -0.10488701, z: 0.085885525}
 --- !u!65 &2239500200811839711
 BoxCollider:
   m_ObjectHideFlags: 0
