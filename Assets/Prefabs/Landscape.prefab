@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7df887bbfe939dd49a618000fe781e2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lastObstacle: {x: 0, y: 0, z: 0}
 --- !u!114 &176088536494020662
 MonoBehaviour:
   m_ObjectHideFlags: 0

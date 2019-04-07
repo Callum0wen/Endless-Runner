@@ -9,7 +9,11 @@ public class GameManager : MonoBehaviour
 	public GameObject gameOverUI;
 
 	public float gameOverUIDelay = 5f;
-	public bool gameOver = false;
+	public bool gameOver
+	{
+		get;
+		set;
+	}
 
 	private void Start()
 	{
@@ -18,14 +22,16 @@ public class GameManager : MonoBehaviour
 
 	public void EndGame()
 	{
-		Debug.Log("Run EndGame()");
-		gameOver = true;
-		bike.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
-		man.breakForce = 1;
-		bike.GetComponent<BikeController>().enabled = false;
-		score.GetComponent<Score>().enabled = false;
+		if (!gameOver)
+		{
+			gameOver = true;
+			bike.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+			man.breakForce = 1;
+			bike.GetComponent<BikeController>().enabled = false;
+			score.GetComponent<Score>().enabled = false;
 
-		Invoke("EndScreen", gameOverUIDelay);
+			Invoke("EndScreen", gameOverUIDelay);
+		}
 	}
 
 	public void EndScreen()
@@ -35,7 +41,7 @@ public class GameManager : MonoBehaviour
 
 	public void Restart()
 	{
-		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+		SceneManager.LoadScene(1);
 	}
 
 	public void Menu ()

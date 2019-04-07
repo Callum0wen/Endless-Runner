@@ -17,7 +17,11 @@ public class GenerateTerrain : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
 	{
-		Debug.Log(seed);
+		GenerateObstacles genObsScript = landscape.GetComponent<GenerateObstacles>();
+		if (this.transform.position == Vector3.zero)
+		{
+			genObsScript.lastObstacle = Vector3.zero;
+		}
 		//Gets the plane and goes through all the vertices, assigning the y value to be equal to the perlin
 		//noise value, relative to the detail (i.e. the smoothness), and the height (actual height of the noise).
 		gameObject.tag = "Ground";
@@ -33,7 +37,7 @@ public class GenerateTerrain : MonoBehaviour
 
 			if (this.transform.position.x == 0 && Mathf.Round(vertices[v].x) == -3)
 			{
-				landscape.GetComponent<GenerateObstacles>().spawnObstacle(perlin, vertices[v] + this.transform.position, this);
+				genObsScript.spawnObstacle(perlin, vertices[v] + this.transform.position, this);
 			}
 
 			

@@ -1,20 +1,22 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class GenerateObstacles : MonoBehaviour
 {
-	private Vector3 lastObstacle;
+	public Vector3 lastObstacle
+	{
+		get;
+		set;
+	}
 
 	private void Start()
 	{
-		lastObstacle = new Vector3(0,0,0);
+		lastObstacle = Vector3.zero;
 	}
 
 	public void spawnObstacle (float perlin, Vector3 coordinate, GenerateTerrain plane)
 	{
 		if((coordinate.z) - (lastObstacle.z + 50) > 0)
 		{
-			//Debug.Log("Obstacle can spawn");
 			//Spawns logs
 			if (perlin > 0.7)
 			{

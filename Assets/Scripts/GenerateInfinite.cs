@@ -19,8 +19,8 @@ public class GenerateInfinite : MonoBehaviour
 	public GameObject plane;
 	public GameObject player;
 
-	public Text seedText;
-	public int seed;
+	//public Text seedText;
+	private int seed;
 
 	int planeSize = 10;
 	int halfTilesX = 5;	//amount of tiles to render in the x axis away from the player, 10 - player - 10
@@ -34,8 +34,7 @@ public class GenerateInfinite : MonoBehaviour
     void Start()
     {
 		seed = Random.Range(0, 10000);
-		Debug.Log("made seed");
-		seedText.text = seed.ToString();
+		//seedText.text = seed.ToString();
 
 		this.gameObject.transform.position = Vector3.zero;
 		startPos = Vector3.zero;

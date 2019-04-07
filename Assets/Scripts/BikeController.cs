@@ -14,15 +14,22 @@ public class BikeController : MonoBehaviour
 
 	public GameManager gameManager;
 
-	public float maxVelocity = 30f;
-	public float bikeForce = 10f;
-	public float pedalRotation = 3;
-	public float leanForce = 2000f;
-	public float jumpForce = 1500f;
+	private float maxVelocity = 30f;
+	private float bikeForce = 10f;
+	private float pedalRotation = 3;
+	private float leanForce = 2000f;
+	private float jumpForce = 1500f;
+
+	private bool canFall
+	{
+		get;
+		set;
+	}
+	private float canFallDelay = 2.5f;
 
 	public float cameraOffset = 0f;
-	public float minCameraDistance = -5f;
-	public float maxCameraDistance = 20f;
+	private float minCameraDistance = -5f;
+	private float maxCameraDistance = 20f;
 
 	void ResetTensor()
 	{
@@ -32,6 +39,8 @@ public class BikeController : MonoBehaviour
 	private void Start()
 	{
 		bike.AddForce(0, 0, bikeForce);
+		canFall = false;
+		Invoke("CanFallTrue", canFallDelay);
 	}
 
 	public void GetInput()
@@ -87,10 +96,15 @@ public class BikeController : MonoBehaviour
 
 	private void StopCheck()
 	{
-		if (bike.velocity.z < 0.5)
+		if (canFall && !gameManager.gameOver && bike.velocity.z < 0.1)
 		{
 			gameManager.EndGame();
 		}
+	}
+
+	private void CanFallTrue()
+	{
+		canFall = true;
 	}
 
 	private void CameraUpdate()
@@ -101,7 +115,7 @@ public class BikeController : MonoBehaviour
 		}
 		if (verticalInput < 0 && cameraOffset > minCameraDistance)
 		{
-			cameraOffset -= 0.01f;
+			cameraOffset -= 0.02f;
 		}
 		if (cameraOffset > minCameraDistance)
 		{
@@ -115,7 +129,7 @@ public class BikeController : MonoBehaviour
 		GetInput();
 		Accelerate();
 		CameraUpdate();
-		//StopCheck();
+		StopCheck();
 		Jump();
 		Lean();
     }
