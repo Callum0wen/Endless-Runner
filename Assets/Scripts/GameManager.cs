@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
 	public FixedJoint man;
 	public GameObject gameOverUI;
 
-	public float gameOverUIDelay = 5f;
+	public float gameOverUIDelay = 1f;
 	public bool gameOver
 	{
 		get;

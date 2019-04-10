@@ -1,11 +1,11 @@
-﻿using UnityEngine;
-using UnityEngine.UI;
+﻿using TMPro;
+using UnityEngine;
 
 public class Score : MonoBehaviour
 {
 	public Transform player;
-	public Text scoreText;
-	public Text finalScore;
+	public TextMeshProUGUI scoreText;
+	public TextMeshProUGUI finalScore;
 
     // Update is called once per frame
     void Update()
